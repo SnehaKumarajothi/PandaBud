@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PandaBud</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <iframe src="https://drive.google.com/file/d/1HnzTvlxfIMt_IW44Ff7c0YPEubV34fU5/preview" width="180" height="180"></iframe>
+
+    <h1>PandaBud</h1>
+
+    <div class="chat-box">
+      <input type="text" id="userInput" placeholder="Tell PandaBud how you feel..." />
+
+      <select id="modelSelect">
+        <option value="logistic">Logistic Regression</option>
+        <option value="naive_bayes">Naive Bayes</option>
+        <option value="svm">SVM</option>
+      </select>
+
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div id="chatArea"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
